@@ -1,7 +1,7 @@
 'use strict';
 
 var Drone = require('rolling-spider');
-var noble = require('noble');
+var noble = require('@icanos/noble');
 var knownDevices = [];
 
 if (noble.state === 'poweredOn') {
@@ -13,7 +13,7 @@ if (noble.state === 'poweredOn') {
 function start () {
   noble.startScanning();
 
-  noble.on('discover', function(peripheral) {
+  noble.on('discover', peripheral => {
     if (!Drone.isDronePeripheral(peripheral)) {
       return; // not a rolling spider
     }
