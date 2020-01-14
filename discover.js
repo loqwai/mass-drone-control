@@ -1,32 +1,21 @@
-'use strict';
+'use strict'
 
-var Drone = require('rolling-spider');
-var noble = require('@icanos/noble');
-var knownDevices = [];
+var Drone = require('rolling-spider')
 
-if (noble.state === 'poweredOn') {
-  start();
-} else {
-  noble.on('stateChange', start);
-}
+console.log('starting')
+connectToDrone()
 
-function start () {
-  console.log('starting')
-  var badCount = 0;
-  noble.startScanning();
 
-  noble.on('discover', peripheral => {
-    var details = {
-      name: peripheral.advertisement.localName,
-      uuid: peripheral.uuid,
-      rssi: peripheral.rssi
-    };
-    if (!Drone.isDronePeripheral(peripheral)) {
-      badCount++
-      return; // not a rolling spider
-    }
-
-    knownDevices.push(details);
-    console.log(knownDevices.length + ': ' + details.name + ' (' + details.uuid + '), RSSI ' + details.rssi);
-  });
+function connectToDrone() {
+  
+  console.log("we're connecting")
+  const d = new Drone()
+  d.connect(function () {
+    console.log('got a connection')
+    d.setup(function () {
+      console.log('got a setup')
+      d.startPing()
+      d.takeOff()
+    })
+  })
 }

@@ -13,9 +13,9 @@
   optionalDependencies:
     usb "^1.6.0"
 
-"@icanos/noble@^1.9.2-8":
+"noble@^1.9.2-8":
   version "1.9.2-9"
-  resolved "https://registry.yarnpkg.com/@icanos/noble/-/noble-1.9.2-9.tgz#ff1c34b79f23e58a5b959c8e7fc97e90bf8f10be"
+  resolved "https://registry.yarnpkg.com/noble/-/noble-1.9.2-9.tgz#ff1c34b79f23e58a5b959c8e7fc97e90bf8f10be"
   integrity sha512-u4zJS+Rl1cBJAd+Z0DiBCOqKhNOUor5fiT6Jtl3WAcF9QlAS+O22HC9yUaQB5DzcfpS5DpBdMpglUTG3xV/kQA==
   dependencies:
     debug "^4.1.1"
