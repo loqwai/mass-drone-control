@@ -11,18 +11,20 @@ if (noble.state === 'poweredOn') {
 }
 
 function start () {
+  console.log('starting')
+  var badCount = 0;
   noble.startScanning();
 
   noble.on('discover', peripheral => {
-    if (!Drone.isDronePeripheral(peripheral)) {
-      return; // not a rolling spider
-    }
-
     var details = {
       name: peripheral.advertisement.localName,
       uuid: peripheral.uuid,
       rssi: peripheral.rssi
     };
+    if (!Drone.isDronePeripheral(peripheral)) {
+      badCount++
+      return; // not a rolling spider
+    }
 
     knownDevices.push(details);
     console.log(knownDevices.length + ': ' + details.name + ' (' + details.uuid + '), RSSI ' + details.rssi);
