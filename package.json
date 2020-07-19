@@ -19,7 +19,7 @@
   "homepage": "https://github.com/loqwai/mass-drone-control#readme",
   "dependencies": {
     "noble": "^1.9.2-8",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "rolling-spider": "^1.7.0",
     "temporal": "^0.7.1"
   }

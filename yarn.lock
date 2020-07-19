@@ -13,17 +13,6 @@
   optionalDependencies:
     usb "^1.6.0"
 
-"noble@^1.9.2-8":
-  version "1.9.2-9"
-  resolved "https://registry.yarnpkg.com/noble/-/noble-1.9.2-9.tgz#ff1c34b79f23e58a5b959c8e7fc97e90bf8f10be"
-  integrity sha512-u4zJS+Rl1cBJAd+Z0DiBCOqKhNOUor5fiT6Jtl3WAcF9QlAS+O22HC9yUaQB5DzcfpS5DpBdMpglUTG3xV/kQA==
-  dependencies:
-    debug "^4.1.1"
-    napi-thread-safe-callback "0.0.6"
-    node-addon-api "^1.1.0"
-  optionalDependencies:
-    "@abandonware/bluetooth-hci-socket" "^0.5.3-3"
-
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
@@ -298,10 +287,10 @@ lodash@3.9.3:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-3.9.3.tgz#0159e86832feffc6d61d852b12a953b99496bd32"
   integrity sha1-AVnoaDL+/8bWHYUrEqlTuZSWvTI=
 
-lodash@^4.17.15:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+lodash@^4.17.19:
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 "logitech-dual-action-controller@git+https://github.com/voodootikigod/node-logitech-dual-action-controller.git":
   version "1.0.2"
@@ -408,6 +397,17 @@ noble@^1.8.0:
     bluetooth-hci-socket "^0.5.1"
     bplist-parser "0.0.6"
     xpc-connection "~0.1.4"
+
+noble@^1.9.2-8:
+  version "1.9.2-9"
+  resolved "https://registry.yarnpkg.com/noble/-/noble-1.9.2-9.tgz#ff1c34b79f23e58a5b959c8e7fc97e90bf8f10be"
+  integrity sha512-u4zJS+Rl1cBJAd+Z0DiBCOqKhNOUor5fiT6Jtl3WAcF9QlAS+O22HC9yUaQB5DzcfpS5DpBdMpglUTG3xV/kQA==
+  dependencies:
+    debug "^4.1.1"
+    napi-thread-safe-callback "0.0.6"
+    node-addon-api "^1.1.0"
+  optionalDependencies:
+    "@abandonware/bluetooth-hci-socket" "^0.5.3-3"
 
 node-abi@^2.7.0:
   version "2.13.0"
